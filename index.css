@@ -68,6 +68,11 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
 .section2 {
   background-image: url("/section2.png");
   height: 600px;
@@ -194,38 +199,14 @@
   display: none;
   position: absolute;
 }
-.kh-lake {
-  top: 340px;
-  right: 720px;
-}
-.cont5:hover ~ .kh-lake {
-  display: block;
-  color: white;
-}
 .container :hover {
   border: 4px solid #fff;
-}
-.kh-togoo {
-  top: 680px;
-  right: 750px;
-}
-.cont3:hover ~ .kh-togoo {
-  display: block;
-  color: white;
 }
 .sukh {
   top: 600px;
   right: 200px;
 }
 .cont1:hover ~ .sukh {
-  display: block;
-  color: white;
-}
-.t-lake {
-  top: 680px;
-  right: 850px;
-}
-.cont4:hover ~ .t-lake {
   display: block;
   color: white;
 }
@@ -237,10 +218,35 @@
   display: block;
   color: white;
 }
+.kh-togoo {
+  top: 680px;
+  right: 750px;
+}
+.cont3:hover ~ .kh-togoo {
+  display: block;
+  color: white;
+}
+.t-lake {
+  top: 680px;
+  right: 850px;
+}
+.cont4:hover ~ .t-lake {
+  display: block;
+  color: white;
+}
+.kh-lake {
+  top: 340px;
+  right: 720px;
+}
+.cont5:hover ~ .kh-lake {
+  display: block;
+  color: white;
+}
 .section4 {
   background-image: url(/footer.png);
   background-size: cover;
   height: 100vh;
+  flex-direction: column;
 }
 .title3 {
   color: #000;
@@ -255,9 +261,68 @@
   padding-top: 10px;
 }
 .package {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 1200px;
   height: 527px;
-  background-color: red;
-  margin: 80px;
-  padding-left: 500px;
+  margin-top: 80px;
+}
+.price-card {
+  width: 384px;
+  height: 527px;
+  align-items: flex-start;
+  border-radius: 40px;
+  background: #fafbfc;
+}
+.c1-1 {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.budget {
+  font-size: 18px;
+  padding: 32px 24px;
+}
+.dollar {
+  color: #303030;
+  font-size: 40px;
+  padding-left: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.ess {
+  color: #919191;
+  font-size: 16px;
+  padding-left: 20px;
+  margin-bottom: 32px;
+}
+.garchig {
+  font-size: 18px;
+  color: #121316;
+  padding-left: 70px;
+  margin-bottom: 16px;
+}
+.checks {
+  font-size: 14px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  padding-left: 30px;
+  margin-bottom: 32px;
+}
+.button {
+  width: 336px;
+  height: 48px;
+  border-radius: var(--radius-rounded-full, 9999px);
+  background: #a4d1e2;
+  display: flex;
+  justify-content: center;
+  margin-left: 25px;
+}
+.fb {
+  width: 167px;
+  height: 44px;
+  border-radius: var(--radius-rounded-full, 9999px);
+  background: #fafbfc;
 }
