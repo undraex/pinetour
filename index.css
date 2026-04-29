@@ -49,7 +49,7 @@
 .descriptions {
   display: flex;
   flex-direction: column;
-  margin-top: 300px;
+  margin-top: 80px;
 }
 .pure-magic {
   font-size: 80px;
@@ -146,18 +146,25 @@
 .section3 {
   background-image: url(/map.png);
   background-size: cover;
-  height: 100vh;
+  background-position: center;
+  height: 900px;
   position: relative;
+  overflow: hidden;
 }
 .title1 {
   font-size: 42px;
+  font-weight: 600;
+  line-height: 1.2;
   color: #000;
-  padding-top: 120px;
+  padding-top: 60px;
 }
 .title2 {
   color: rgba(24, 24, 27, 0.7);
   font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
   padding: 10px;
+  text-transform: capitalize;
 }
 .day {
   background-color: white;
@@ -181,6 +188,8 @@
   gap: 20px;
   width: 100%;
   max-width: 1440px; /* ✅ Хамгийн их 1440px */
+  box-sizing: border-box;
+  padding-left: 120px;
   margin: 59px auto 0 auto;
 }
 
@@ -190,6 +199,8 @@
   width: 513px;
   height: 112px;
   border-radius: 120px;
+  box-sizing: border-box;
+  border: 4px solid transparent;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -210,75 +221,93 @@
 }
 .location-name {
   font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+.location-name img {
+  width: 14px;
+  height: 14px;
 }
 .pin {
   width: 34px;
   height: 34px;
 }
-.pin1 {
-  position: absolute;
-  right: 1020px;
-  top: 600px;
+.cont1-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
 }
-.pin2 {
-  position: absolute;
-  top: 500px;
-  right: 750px;
-}
-.pin3 {
-  position: absolute;
-  top: 710px;
-  right: 380px;
-}
+.pin1,
+.pin2,
+.pin3,
 .pin4 {
   position: absolute;
-  right: 720px;
-  top: 1050px;
+  z-index: 1;
+}
+.pin1 {
+  left: calc(50% - 720px + 960px);
+  top: 250px;
+}
+.pin2 {
+  left: calc(50% - 720px + 795px);
+  top: 374px;
+}
+.pin3 {
+  left: calc(50% - 720px + 1180px);
+  top: 392px;
+}
+.pin4 {
+  left: calc(50% - 720px + 965px);
+  top: 632px;
 }
 .circle-image {
   width: 245px;
   height: 245px;
   display: none;
   position: absolute;
+  z-index: 2;
+  pointer-events: none;
 }
-.container :hover {
-  border: 4px solid #fff;
+.cont:hover {
+  border-color: #fff;
 }
 .sukh {
-  top: 600px;
-  right: 200px;
+  left: calc(50% - 720px + 1045px);
+  top: 300px;
 }
 .cont1:hover ~ .sukh {
   display: block;
   color: white;
 }
 .amar {
-  top: 350px;
-  right: 660px;
+  left: calc(50% - 720px + 850px);
+  top: 180px;
 }
 .cont2:hover ~ .amar {
   display: block;
   color: white;
 }
 .kh-togoo {
-  top: 680px;
-  right: 750px;
+  left: calc(50% - 720px + 675px);
+  top: 300px;
 }
 .cont3:hover ~ .kh-togoo {
   display: block;
   color: white;
 }
 .t-lake {
-  top: 680px;
-  right: 850px;
+  left: calc(50% - 720px + 620px);
+  top: 395px;
 }
 .cont4:hover ~ .t-lake {
   display: block;
   color: white;
 }
 .kh-lake {
-  top: 340px;
-  right: 720px;
+  left: calc(50% - 720px + 650px);
+  top: 145px;
 }
 .cont5:hover ~ .kh-lake {
   display: block;
@@ -304,7 +333,8 @@
 .package {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 24px;
   width: 1440px;
   height: 527px;
   margin-top: 80px;
